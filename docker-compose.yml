@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db-heritage:
+    image: postgres
+    environment:
+      POSTGRES_DB: heritage
+      POSTGRES_USER: heritage
+      POSTGRES_PASSWORD: heritage
+    volumes:
+      - ./.data/db-heritage:/var/lib/postgresql/data
+    ports:
+      - '5443:5432'
